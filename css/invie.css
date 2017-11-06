@@ -284,7 +284,7 @@ input:focus, textarea:focus {
 
 @media screen and (max-width: 800px) {
   body {
-      border: 2px solid red;
+      /*border: 2px solid red;*/
   }
   /*---------------Portada-----------------*/
   .titulo {
@@ -307,7 +307,7 @@ input:focus, textarea:focus {
   /*---------------Portada----------------*/
   /*---------------Guitarras--------------*/
   .guitarras {
-    border:2px solid green;
+   /* border:2px solid green;*/
     text-align: center;
   }
 
@@ -330,6 +330,11 @@ input:focus, textarea:focus {
     margin:0;
     position: static;
   }
+
+  .contenedor-guitarra-a{
+    padding:0px;
+  }
+
   /*---------------Guitarras--------------*/
   /*.contenedor {
     width: auto;  /*800px original
@@ -342,9 +347,99 @@ input:focus, textarea:focus {
 
 
 /*------------Adaptado para dispositivos mobiles---------------*/
+/*Footer*/
+@media screen and (max-width: 767px) {  /*1 pixel menos que el ipad*/
+  .footer .contenedor{
+    display: block;
+    /*border:1px solid black;*/
+  }
+  .contacto{
+    margin: 0 auto;
+  }
+  .formulario{
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+  }
+  .intereses label{
+    display: block;
+    font-size: 16px;
+  }
+  .col1{
+    margin: 0;
+  }
+  input [type="text"],
+  input [type="email"]{
+    font-size: 16px;
+    padding:5px 0;
+  }
+  textarea {
+    width: 100%;
+  }
+
+  input [type="radio"],
+  input [type="checkbox"]{
+    zoom:1.5;
+  }
+
+}
+
 
 @media screen and (max-width: 660px) {
-  .menu {
-    border:1px solid red;
+  .header {
+    text-align: center;
   }
+  .logotipo {
+    margin:0;
+  }
+  .menu {
+    /*border:1px solid red;*/
+    position: static; /*Con esto se baja*/
+    display:block;
+    text-align: center;
+  }
+
+  .menu li:first-child {
+    /*border: 1px solid red;   Quitamos el margen al primer li*/
+    margin: 0px;
+  }
+
+  .menu ul{
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /*----Portada----*/
+  .menu li {
+    display: block;
+    margin:0;
+    padding: 10px 0;
+    border-bottom: 1px solid white;
+  }
+  .menu li:first-child {
+    border-top:1px solid white;
+  }
+  .menu li:before{
+    display: none;
+  }
+  .portada{
+    text-align: center;
+  }
+  .titulo{
+    font-size: 30px;
+  }
+  .title {
+    font-size: 16px;
+  }
+  /*----Portada----*/
+  /*----Guitarras----*/
+  .guitarra img{
+    width: 200px;
+  }
+  .title-b{
+    font-size: 30px;
+  }
+
+  /*----Guitarras----*/
 }
